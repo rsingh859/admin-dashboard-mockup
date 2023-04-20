@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npm run dev --prefix server",
+    "client": "npm run start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "npm-install": "npm install --prefix server && npm install --prefix client && npm install",
+    "watch": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Ritesh Singh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
 }
