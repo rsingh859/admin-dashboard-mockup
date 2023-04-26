@@ -51,7 +51,7 @@ function reverseTokens(tokensDark) {
     for (let i = 0; i < length; i++) {
       reversedObj[keys[i]] = values[length - i - 1];
     }
-    reverseTokens[key] = reversedObj;
+    reversedTokens[key] = reversedObj;
   });
   return reversedTokens;
 }
