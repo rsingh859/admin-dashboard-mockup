@@ -38,7 +38,7 @@ const Product = ({
       <CardContent>
         <Typography
           sx={{ fontSize: 14 }}
-          color={theme.palette.secondary[700]}
+          color={theme.palette.secondary[200]}
           gutterBottom
         >
           {category}
@@ -49,7 +49,13 @@ const Product = ({
         <Typography sx={{ mb: "1.5rem" }} color={theme.palette.secondary[400]}>
           ${Number(price).toFixed(2)}
         </Typography>
-        <Rating value={rating} readOnly />
+        <Rating
+          sx={{
+            color: theme.palette.secondary[200],
+          }}
+          value={rating}
+          readOnly
+        />
 
         <Typography variant="body2">{description}</Typography>
       </CardContent>
